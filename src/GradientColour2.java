@@ -1,3 +1,4 @@
+
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -21,42 +22,42 @@ import javax.swing.JFrame;
 
 public class GradientColour2 extends JApplet {
 
-  public void init() {
-    setBackground(Color.white);
-    setForeground(Color.white);
-  }
+    Color NewGreen = new Color(26, 134, 58);
+    Color NewBlue = new Color(32, 0, 210);
+    Color NewRed = new Color(255, 17, 23);
 
-  public void paint(Graphics g) {
-    Graphics2D g2 = (Graphics2D) g;
-    g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
-        RenderingHints.VALUE_ANTIALIAS_ON);
+    public void init() {
+        setBackground(Color.white);
+        setForeground(Color.white);
+    }
 
-    g2.setPaint(Color.gray);
-    int x = 5;
-    int y = 7;
-    // fill RoundRectangle2D.Double
-    GradientPaint redtowhite = new GradientPaint(x, y, Color.red, 200, y,
-        Color.blue);
-    g2.setPaint(redtowhite);
-    g2.fill(new RoundRectangle2D.Double(x, y, 200, 200, 10, 10));
-    g2.setPaint(Color.black);
-    g2.drawString("Filled RoundRectangle2D", x, 250);
+    public void paint(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
 
-  }
+        g2.setPaint(Color.GRAY);
+        int x = 5;
+        int y = 7;
+        GradientPaint greentoblue = new GradientPaint(x, y, NewGreen, 2000, y, NewBlue);
+        g2.setPaint(greentoblue);
+        g2.fill(new RoundRectangle2D.Double(x, y, 500, 500, 50, 50));
+        g2.setPaint(Color.black);
 
-  public static void main(String s[]) {
-    JFrame f = new JFrame("");
-    f.addWindowListener(new WindowAdapter() {
-      public void windowClosing(WindowEvent e) {
-        System.exit(0);
-      }
-    });
-    JApplet applet = new GradientColour2();
-    f.getContentPane().add("Center", applet);
-    applet.init();
-    f.pack();
-    f.setSize(new Dimension(300, 300));
-    f.show();
-  }
+    }
+
+    public static void main(String s[]) {
+        JFrame f = new JFrame("");
+        f.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+        JApplet applet = new GradientColour2();
+        f.getContentPane().add("Center", applet);
+        applet.init();
+        f.pack();
+        f.setSize(new Dimension(550, 550));
+        f.show();
+    }
 }
-
