@@ -1,4 +1,4 @@
-
+//http://www.java2s.com/Code/Java/2D-Graphics-GUI/Gradientsinthemiddle.htm
     
 
 import java.awt.Color;

@@ -1,4 +1,5 @@
-    
+//http://www.java2s.com/Code/Java/2D-Graphics-GUI/GradientPaintEllipse.htm
+
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -38,8 +39,7 @@ public class GradientColour extends JApplet {
     GradientPaint redtowhite = new GradientPaint(x, y, Color.red, 200, y, Color.white);
     g2.setPaint(redtowhite);
     g2.fill(new Ellipse2D.Double(x, y, 200, 200));
-    g2.setPaint(Color.black);
-    g2.drawString("Filled Ellipse2D", x,250);
+    
   }
 
   public static void main(String s[]) {

@@ -1,3 +1,4 @@
+//http://www.java2s.com/Code/Java/2D-Graphics-GUI/GradientPaintdemo.htm
 
 import java.awt.BasicStroke;
 import java.awt.Color;
